@@ -1,0 +1,65 @@
+name: Agent task
+description: Define a feature or fix that an agent can plan and implement.
+title: "[Agent]: "
+labels:
+  - agent:ready
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is wrong, missing, or inefficient?
+      placeholder: Describe the current state and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: desired-behavior
+    attributes:
+      label: Desired behavior
+      description: What should be true after this work is done?
+      placeholder: Describe the expected user-facing or system behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: List testable conditions that define done.
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What related work should the agent avoid?
+      placeholder: Keep this focused so the PR stays reviewable.
+    validations:
+      required: false
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Note architecture, design, compatibility, performance, security, or accessibility constraints.
+      placeholder: Existing patterns, APIs, components, data contracts, or UX rules to preserve.
+    validations:
+      required: false
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification
+      description: Which checks should the agent run?
+      value: |
+        - npm run build
+      placeholder: Add unit, integration, Playwright, or manual QA expectations.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Add screenshots, logs, related issues, prior PRs, designs, or docs.
+    validations:
+      required: false
