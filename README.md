@@ -65,6 +65,20 @@ pnpm create next-app --example blog-starter blog-starter-app
 
 Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
 
+## Testing
+
+Run the Vitest test suite once:
+
+```bash
+npm test
+```
+
+Run tests in watch mode during local development:
+
+```bash
+npm run test:watch
+```
+
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
 # Notes
